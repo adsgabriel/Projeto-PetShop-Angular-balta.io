@@ -4,8 +4,7 @@ import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  templateUrl: './login-page.component.html'
 })
 export class LoginPageComponent implements OnInit {
   public form: FormGroup;
