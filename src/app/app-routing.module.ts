@@ -8,13 +8,16 @@ import { FramePageComponent } from './pages/master/frame.page';
 import { CartPageComponent } from './pages/store/cart-page/cart-page.component';
 import { ProductsPageComponent } from './pages/store/products-page/products-page.component';
 
+import { AuthService } from './services/auth.service';
+
 const routes: Routes = [
   { 
     path: '', 
     component: FramePageComponent,
     children: [
       { path: '', component: ProductsPageComponent },
-      { path: 'cart', component: CartPageComponent }
+      { path: 'cart', component: CartPageComponent, canActivate: [AuthService] },
+ 
     ]
   },
   {
